@@ -12,7 +12,7 @@ function sequenzaOperazioni(operazioni, intervallo) {
     let i = 0
 
     function eseguiOperazioni() {
-        if (i < operazioni.length) {
+        if (i <= operazioni.length) {
             operazioni[i]();
             i++;
             setTimeout(eseguiOperazioni, intervallo);
