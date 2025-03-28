@@ -6,10 +6,14 @@ function creaContatoreAutomatico(time) {
 
     let contatore = 0;
 
-    return setInterval(() => {
-        contatore++;
-        console.log(contatore)
-    }, time)
+    return () => {
+        setInterval(() => {
+            contatore++;
+            console.log(contatore)
+        }, time)
+    }
 }
 
-creaContatoreAutomatico(1000)
+const usaContatore = creaContatoreAutomatico(1000)
+
+usaContatore()

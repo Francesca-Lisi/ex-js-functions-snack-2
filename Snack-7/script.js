@@ -5,18 +5,17 @@
 
 function eseguiFerma(messaggio, start, stop) {
 
-    setTimeout(function () {
-        let intervallo = setInterval(function () {
-            console.log(messaggio)
-        }, 1000)
 
-        setTimeout(function () {
-            clearInterval(intervallo)
-            console.log('Stop!')
-        }, stop)
-
+    let intervallo = setInterval(function () {
+        console.log(messaggio)
     }, start)
+
+    setTimeout(function () {
+        clearInterval(intervallo)
+        console.log('Stop!')
+    }, stop)
+
 
 }
 
-eseguiFerma('un secondo è passato', 3000, 10000)
+eseguiFerma('un secondo è passato', 1000, 5000)
